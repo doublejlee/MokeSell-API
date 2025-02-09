@@ -1,0 +1,34 @@
+<!-- dashboard.html - User Dashboard with Leaderboard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="welcome-message">Welcome!</h1>
+    
+    <button onclick="logout()">Logout</button>
+
+    <!-- Leaderboard Section -->
+    <div class="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-container"></div>
+    </div>
+
+    <!-- User Listings Section -->
+    <div class="listings-container">
+        <h2>Your Listings</h2>
+        <div id="listings-container"></div>
+    </div>
+
+    <!-- Flash Sale Countdown Timer -->
+    <div class="timer-container">
+        <h2 id="countdown-timer">Flash Sale Ends In: -- seconds</h2>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
