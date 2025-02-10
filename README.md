@@ -1,39 +1,42 @@
-# MokeSell-API
-MokeSell - Race to Sell 
-Final Submission - Frontend & Backend Implementation
+🚀 MokeSell - Race to Sell | Final Submission
+A dynamic sales competition platform where users compete in real-time to boost their sales and rank higher on the leaderboard before the flash sale countdown runs out!
 
- Project Overview
-MokeSell is an interactive sales competition platform where users:
-✅ Sign up and log in to their accounts
-✅ Add and browse product listings
-✅ Compete in a leaderboard based on sales performance
-✅ Race against a flash sale countdown timer
+🔗 GitHub Repository: MokeSell - Race to Sell
 
-The platform uses MongoDB, Express.js, Node.js, and JavaScript (frontend + backend) for a fully functional web experience.
+📌 Project Overview
+MokeSell is an interactive e-commerce sales competition platform that allows users to:
 
-*Features & Functionality
-User Authentication
-Signup (/auth/signup) → Users register with a username & password
+✅ Sign up and log in securely
+✅ Add and browse product listings in real-time
+✅ Compete on a leaderboard based on sales performance
+✅ Race against a flash sale countdown timer before time runs out!
+
+🚀 The platform is built using MongoDB, Express.js, Node.js, and JavaScript (frontend + backend) for a fully interactive user experience.
+
+📌 Features & Functionality
+🔑 User Authentication
+Signup (/auth/signup) → Register with a username & password
 Login (/auth/login) → JWT authentication for secure user sessions
 Token-based authentication → Protects sensitive endpoints
 🛒 Product Listings
 View all listings (/listings)
 Create new listings (/listings - Auth required)
-Listings include product name, price & seller info
-🏆 Leaderboard (Live Rankings)
-Leaderboard ranks users based on sales (/leaderboard)
-Real-time updates when a user makes a sale
-Leaderboard resets at the end of each flash sale
+Listings include product name, price & seller information
+🏆 Real-Time Leaderboard
+Ranks users based on sales (/leaderboard)
+Live updates when a user makes a sale
+Resets at the end of each flash sale
 ⏳ Flash Sale Countdown
 Timer syncs with the backend (/timer)
 Real-time updates every second
-Sales competition ends when timer hits zero
+Competition ends when timer hits zero
 📡 API Integration
-Fully RESTful API using Express.js & MongoDB
-Frontend interacts with backend using fetch() requests
+RESTful API using Express.js & MongoDB
+Frontend interacts with backend using Fetch API
+Secure API calls with authentication middleware
 📌 Technologies Used
 Technology	Purpose
-MongoDB	Database for storing users, listings, leaderboard
+MongoDB	Stores users, product listings, and leaderboard rankings
 Express.js	Backend framework for handling API requests
 Node.js	Server-side runtime environment
 JWT (jsonwebtoken)	Secure user authentication
@@ -63,11 +66,11 @@ PORT=5008
 sh
 Copy
 node server.js
-🚀 Server should now be running on http://localhost:5008
+🚀 Your backend server should now be running on http://localhost:5008
 
 5️⃣ Open the Frontend
-Open index.html in a browser
-Login or Sign Up
+Open index.html in your browser
+Log in or Sign Up
 Test all functionalities (Listings, Leaderboard, Timer)
 📌 API Documentation
 Endpoint	Method	Description	Auth Required
@@ -93,36 +96,28 @@ Copy
 │-- 📄 listings.js            # Product listings functionality
 │-- 📄 README.md              # Documentation
 │-- 📄 .env                   # Environment variables (Not committed to Git)
-
-*Git & GitHub Issues
+│-- 📄 package.json           # Dependencies
+│-- 📄 .gitignore             # Prevents sensitive files from being committed
+📌 Troubleshooting & Common Issues
+🔴 Git & GitHub Issues
 Issue	Solution
 Cannot push changes to GitHub	Run git pull origin main --rebase before pushing
 "fatal: not a git repository" error	Run git init inside the project folder
-"rejected - fetch first" error when pushing	Run git pull origin main --rebase before git push origin main
-Accidentally committed sensitive .env file	Remove from Git using git rm --cached .env and update .gitignore
-*MongoDB & Database Challenges
+"rejected - fetch first" error	Run git pull origin main --rebase before git push origin main
+🔴 MongoDB & Database Issues
 Issue	Solution
 MongoDB connection error	Check if your MongoDB URI is correct in .env
-"bad auth: authentication failed" error	Ensure your MongoDB username & password are correct
-"collection not found" error	Make sure you're inserting data correctly using insertMany()
-Data does not persist after restart	Ensure MongoDB Atlas cluster is set up properly and not using local memory
-📌 Known Issues & Fixes
-Issue	Solution
-Leaderboard not displaying	Ensure MongoDB has data (Leaderboard.find())
-Listings not appearing	Check console logs for API request failures
-Login session expired quickly	Extend JWT expiration in server.js
-Port 5000 already in use	Kill process using `netstat -ano
-*Backend Issues (Node.js & Express)
+"bad auth: authentication failed"	Ensure your MongoDB username & password are correct
+Data does not persist after restart	Ensure MongoDB Atlas cluster is set up properly
+🔴 Backend Issues (Node.js & Express)
 Issue	Solution
 "EADDRINUSE: Address already in use" error	Stop the process using CTRL + C and restart
 API returning empty response ({} or [])	Check console.log() inside the API handler to debug
 "Cannot read properties of undefined" error	Ensure req.body, req.user, or req.params are correctly accessed
-CORS policy error when fetching API	Make sure app.use(cors()) is enabled in server.js
-*Frontend Issues (HTML, JavaScript, UI/UX)
+🔴 Frontend Issues (HTML, JavaScript, UI/UX)
 Issue	Solution
 Leaderboard or Listings page is blank	Check if the API call is failing (use console.log())
 Button clicks not working	Check if eventListeners are correctly attached in JavaScript
-Page layout is broken	Inspect using F12 > Console and check CSS rules
 Animations not displaying	Ensure Lottie animations are correctly linked in JavaScript
 📌 Credits & Contributors
 Developed by:
