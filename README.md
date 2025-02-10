@@ -1,7 +1,6 @@
 🚀 MokeSell - Race to Sell | Final Submission
 A dynamic sales competition platform where users compete in real-time to boost their sales and rank higher on the leaderboard before the flash sale countdown runs out!
 
-🔗 GitHub Repository: MokeSell - Race to Sell
 
 📌 Project Overview
 MokeSell is an interactive e-commerce sales competition platform that allows users to:
