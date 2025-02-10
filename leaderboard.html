@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - MokeSell</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="leaderboard.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1>Sales Leaderboard</h1>
+        <a href="dashboard.html">Back to Dashboard</a>
+    </header>
+
+    <section id="leaderboard-container">
+        <h2>Top Sellers</h2>
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th>Sales</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard"></tbody>
+        </table>
+    </section>
+    
+
+
+    
+</body>
+</html>
+

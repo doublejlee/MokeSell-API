@@ -5,41 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MokeSell Race to Sell</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
 <body>
 
-    <div class="auth-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <input type="text" id="login-username" placeholder="Username" required>
-            <input type="password" id="login-password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
+    <header>
+        <h1>MokeSell - Race to Sell</h1>
+    </header>
 
-        <h2>Signup</h2>
-        <form id="signup-form">
-            <input type="text" id="signup-username" placeholder="Username" required>
-            <input type="password" id="signup-password" placeholder="Password" required>
-            <button type="submit">Signup</button>
-        </form>
-    </div>
+    <div class="container">
+        <div class="auth-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
 
-    <div class="listings-container">
-        <h2>Product Listings</h2>
-        <div id="listings-container"></div>
+            <h2>Signup</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
     </div>
-
-    <div class="leaderboard-container">
-        <h2>Leaderboard</h2>
-        <div id="leaderboard-container"></div>
+    <div id="success-animation" class="hidden">
+        <div id="success-lottie"></div>
+        <p>Success! Redirecting...</p>
     </div>
-
-    <div class="timer-container">
-        <h2 id="countdown-timer">Flash Sale Ends In: -- seconds</h2>
+    <div id="error-animation" class="hidden">
+        <div id="error-lottie"></div>
+        <p>Invalid credentials! Try again.</p>
     </div>
+    
+    
 
     <script src="script.js"></script>
-   
-
 </body>
 </html>
+
+

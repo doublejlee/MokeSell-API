@@ -1,34 +1,59 @@
-<!-- dashboard.html - User Dashboard with Leaderboard -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - MokeSell</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
 <body>
-    <h1 id="welcome-message">Welcome!</h1>
-    
-    <button onclick="logout()">Logout</button>
+    <header>
+        <h1>MokeSell Dashboard</h1>
+        <nav>
+            <a href="listings.html"><img src="listings-icon.png" alt="Listings"> Product Listings</a>
+            <a href="leaderboard.html"><img src="leaderboard-icon.png" alt="Leaderboard"> Leaderboard</a>
+            <a href="#" id="logout"><img src="logout-icon.png" alt="Logout"> Logout</a>
+        </nav>
+    </header>
 
-    <!-- Leaderboard Section -->
-    <div class="leaderboard-container">
-        <h2>Leaderboard</h2>
-        <div id="leaderboard-container"></div>
-    </div>
-
-    <!-- User Listings Section -->
-    <div class="listings-container">
-        <h2>Your Listings</h2>
-        <div id="listings-container"></div>
-    </div>
-
-    <!-- Flash Sale Countdown Timer -->
-    <div class="timer-container">
+    <!-- ✅ Flash Sale Countdown -->
+    <div id="countdown-animation-container">
         <h2 id="countdown-timer">Flash Sale Ends In: -- seconds</h2>
+        <div id="countdown-lottie"></div>
     </div>
+
+    <section id="dashboard-content">
+        <div class="user-info">
+            <h2>Welcome, <span id="username">Loading...</span>!</h2>
+            <p>Here’s your sales performance and the latest listings.</p>
+        </div>
+
+        <!-- ✅ Leaderboard -->
+        <div class="dashboard-section">
+            <h2>🏆 Sales Leaderboard</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Sales</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-container"></tbody>
+            </table>
+        </div>
+
+        <!-- ✅ Product Listings -->
+        <section id="latest-listings">
+            <h2>Latest Product Listings</h2>
+            <div id="listings-container"></div>
+        </section>
+        
+    </section>
 
     <script src="dashboard.js"></script>
 </body>
 </html>
+
